@@ -16,9 +16,9 @@ CRUD Application de gestion de Citations (using expressjs, ejs, and mysql)
 
 3. Update quotes ( '/update/(id)' or update button )
 
-4. Display quotes ( '/quotes' )
+4. Display quotes ( '/citation' )
 
-5. Display specific quote ( '/quote/(id)' )
+5. Display specific quote ( '/citation/(id)' )
 
 
 ## How To Install The Modules
