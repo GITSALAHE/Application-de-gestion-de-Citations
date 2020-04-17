@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="icone.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GITSALAH CITATION</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <% if (messages.success) { %>
+    <div class="alert alert-success" role="alert"><%- messages.success %></div>
+    <% } %>
+
+    <% if (messages.error) { %>
+    <div class="alert alert-danger" role="alert"><%- messages.error %></div>
+    <% } %>
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="row">
+            <div class="col">
+                <h1 style="font-family: poppins;">Add Quotes</h1>
+                <div class="form">
+
+                    <form method="POST" action="/" class="form">
+                        <div class="form-group">
+                            <label>Citation</label>
+                            <input placeholder="citation" name="citation" class="input" id="nom" type="text">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Auteur</label>
+                            <input placeholder="auteur" name="auteur" class="input" id="prenom" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label>Source</label>
+                            <input placeholder="source" name="source" class="input" id="age" type="text">
+                        </div>
+
+
+                        <input id="z" type="submit" value="submit">
+                    </form>
+
+                    <br> <br>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

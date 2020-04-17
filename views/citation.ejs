@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GITSALAH CITATION</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="icone.ico">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <% if (messages.success) { %>
+    <div class="alert alert-success" role="alert"><%- messages.success %></div>
+    <% } %>
+
+    <% if (messages.error) { %>
+    <div class="alert alert-danger" role="alert"><%- messages.error %></div>
+    <% } %>
+    <div class="container">
+        <div class="row d-flex justify-content-center align-items-center">
+            <h1 style="font-family: poppins;">Quotes :</h1>
+            <table id="myTable">
+                <thead>
+                    <tr class="table100-head">
+                        <th class="column">ID</th>
+                        <th class="column">text</th>
+                        <th class="column">source</th>
+                        <th class="column">Auteur ID</th>
+                        <th style="width: 50px;" class="column">Detete</th>
+                        <th style="width: 80px;" class="column">Update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% quotes.forEach(function (citation) { %>
+                    <tr>
+                        <td class="mycol"><%= citation.id %> </td>
+                        <td class="mycol"><%= citation.text %></td>
+                        <td class="mycol"><%= citation.source %></td>
+                        <td class="mycol"><%= citation.nom %></td>
+                        <td><a href="/delete/<%= citation.id %>" class="btn btn-sm btn-danger">Delete</a>
+                        </td>
+                        <td><a href="/update/<%= citation.id %> " class="btn btn-sm btn-success"> UPDATE</a> </td>
+
+                    </tr>
+
+                    <% }) %>
+                </tbody>
+            </table>
+            <br><br>
+            <a type="button" href="/" class="btn btn-info">Add Quote</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
